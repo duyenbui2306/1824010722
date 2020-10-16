@@ -1,0 +1,114 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trang web đầu tiên</title>
+    <link rel="StyleSheet" href="./css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>KOI THÉ</h1>
+        <pre>Văn hóa thương hiệu</pre>
+    </header>
+    <nav>
+        <ul>
+            <li><a data-section="nguyenlieu">Nguyên liệu</a></li>
+            <li><a data-section="sanxuat">Quy trình sản xuất</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Thêm</a>
+                <div class="dropdown-content">
+                    <a data-section="connguoi">Con người</a>
+                    <a data-section="huongvi">Hương vị sản phẩm</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="nguyenlieu" class="hideable-section">
+        <div class="ex1">
+            <h2>NGUYÊN LIỆU</h2>
+            <pre>
+
+            </pre>
+            <p><img src="https://www.bandodiadiem.com/wp-content/uploads/2017/11/Koi-Th%C3%A9-Vietnam-%C4%90%C6%B0%E1%BB%9Dng-s%E1%BB%91-17A-Qu%E1%BA%ADn-B%C3%ACnh-T%C3%A2n-5-1-e1513790086393.jpg"></p>
+                <pre>
+
+                </pre>
+                Từng lá trà tươi được lựa chọn cẩn thận và hái từ Đài Loan. Chúng tôi tin rằng lá trà chính là tinh túy
+                trong từng sản phẩm của Koi, mang lại nét đặc trưng riêng và đáp ứng được sự hài lòng của những vị khách
+                khó tính nhất.<br>
+                <br>Trân châu cũng hoàn toàn được làm từ các sản phẩm thiên nhiên, tươi mới, không chỉ mang lại cho thực khách
+                những ly trà sữa thơm ngon mà còn an toàn và tốt cho sức khỏe.
+        </div>
+    </section>
+
+    <section id="sanxuat" class="hideable-section">
+        <p><img src="https://cafebiz.cafebizcdn.vn/thumb_w/600/2019/8/27/maxresdefault-15669243362231583481631-crop-1566924341279460706722.jpg"></p>
+        <div class="ex2">
+            Sau khi có được những nguyên liệu lá trà chất lượng nhất, chúng sẽ được đun bằng những ấm trà truyền thống
+            Đài Loan, là dụng cụ được Koi chế tạo độc quyền.<br>
+            <br>Từng giọt nước được Koi cân đo đong đếm để đảm bảo tỷ lệ chuẩn giữa nước và trà trong một nhiệt độ được kiểm
+            soát chặt chẽ giúp giữ lại hương vị và dinh dưỡng tốt nhất
+        </div>
+    </section>
+
+    <section id="huongvi" class="hideable-section">
+        <div class="ex1">
+            <h2>Hương vị của sản phẩm</h2>
+            <pre>
+            </pre>
+            <p><img src="https://sohanews.sohacdn.com/2019/12/5/koi-1575561416482819479631.jpg"></p>
+            <pre>
+            </pre>
+            Từ quá trình lựa chọn nguyên liệu cho tới chế biến đều đã được kiểm soát chặt chẽ, không một chút lơ là để
+            tạo ra được những sản phẩm trà Koi Thé đồng đều chất lượng trên toàn thế giới.
+            Cho dù bạn thưởng thức Koi Thé tại Việt Nam hay Singapore thì hương vị sản phẩm, tinh túy trong từng ly
+            trà sữa đều không thay đổi.
+        </div>
+    </section>
+
+    <section id="connguoi" class="hideable-section">
+        <div class="ex2">
+            <h2>CON NGƯỜI</h2>
+            <pre>
+
+            </pre>
+            Chúng tôi coi khách hàng chính là những món quà của thượng đế. Vì vậy chúng tôi mong muốn mang đến cho khách
+            hàng không chỉ là những thức uống tuyệt vời mà còn là những sự đối đãi ân cần mà từng nhân viên của Koi đã
+            được đào tạo. Niềm vui sướng của khách hàng khi thưởng thức ly trà, những cái gật đầu hay những nụ cười của
+            khách hàng dành cho chúng tôi đều là những món quà, những niềm vui mà chính Koi Thé nhận được.
+            <pre>
+            </pre>
+            <p><img src="https://inhat.vn/hcm/wp-content/uploads/2019/04/tra-sua-KOI-2.jpg"></p>
+            <pre>
+            </pre>
+            Không chỉ quan tâm tới khách hàng, Koi Thé còn chú trọng tới đời sống vật chất, tinh thần của từng nhân viên.
+            Tại Koi Thé, mỗi nhân viên từ phục vụ tới quản lý, đều là thành viên trong đại gia đình nhà Koi. Koi Thé mong
+            tất cả các bạn làm việc tại đây sẽ có những giờ phút được làm việc trong niềm vui, trong niềm tin mang tới cho
+            khách hàng những thức uống ngon bổ mà không nơi nào có được.
+        </div>
+    </section>
+
+    <script>
+        $(function() {
+            $('nav ul li a').click(function() {
+                // Lấy section để hiển thị
+                var $section = $('#' + $(this).data('section'));
+
+                // Nếu đang hiện thì không làm gì.
+                // Nếu không, ẩn tất cả các se cho hiện (kiểu fade in) phần mong muốn.
+                if (!$section.is(':visible')) {
+                    $('.hideable-section').hide();
+                    $section.fadeIn();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
